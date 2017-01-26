@@ -1,0 +1,302 @@
+/******************************************************************
+Site Name: SIR Annual Report 2015
+Author: Sagetopia
+
+Stylesheet: Tablet & Small Desktop Stylesheet
+******************************************************************/
+
+
+body {
+	font-size: 100%;
+}
+
+a {
+	transition: all 0.2s ease-in-out;
+}
+
+/************************
+H1, H2, H3, H4, H5 STYLES
+*************************/
+
+h1 {
+	font-size: 5.3125em;
+}
+
+h2 {
+	font-size: 2.6875em;
+}
+
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+
+.row {
+    max-width: 700px;
+    width: 66.6%;
+    margin-left: 32%;
+    transition: opacity .25s ease-in-out;
+}
+
+/*********************
+NAVIGATION STYLES
+*********************/
+
+.menu-toggle, .mobile {
+	display: none;
+}
+
+#main-nav {
+	display: block;
+  	width: 32%;
+  	min-width: 25%;
+  	max-width: 500px;
+  	padding: 0;
+  	transition: all 0.2s ease-in-out;
+  	position: absolute;
+  	top: 0;
+  	left: 0;
+
+  	&[data-magellan-expedition-clone] {
+		display: none;
+	}
+
+	&[data-magellan-expedition] {
+	  	top: 20px;
+	  	background: transparent;
+	}
+
+	&.fixed {
+		width: 32%;
+	}
+
+	.logo-wrap {
+		width: 300px;
+		max-width: 100%;
+		background: url('https://d2o0out0f0eahq.cloudfront.net/img/logo_bg.png') left center / 100% no-repeat;
+  		background: url('https://d2o0out0f0eahq.cloudfront.net/img/logo_bg.svg') left center no-repeat, linear-gradient(transparent, transparent);
+  		padding: 1.75em 1em;
+
+  		object, img {
+  			display: block;
+  			padding-top: 1.5em;
+  			margin-top: 1.5em;
+  			border-top: 1px solid $grey;
+  			width: 70%;
+
+  			&:first-child {
+  				padding: 0;
+  				margin: 0;
+  				border: none;
+  			}
+  		}
+	}
+}
+
+.sub-nav {
+	padding: 1em;
+
+	dd {
+		padding: 0.2em 0;
+		float: none;
+		font-family: $roboto;
+
+		a {
+			display: inline-block;
+			text-transform: uppercase;
+			font-size: 1.125em;
+			letter-spacing: 1px;
+  			line-height: 1.5 !important;
+  			background: $white;
+  			color: $text-color;
+
+  			&:hover, &:focus, &:active {
+  				color: $white;
+  				background-color: $light-blue;
+  			}
+		}
+
+		&.active, &.active dd {
+			display: block;
+
+			a {
+  				border-radius: 0;
+
+  				&:hover {
+  					background-color: $light-blue;
+  				}
+			}
+		}
+
+		&.active {
+			& > a {
+				background-color: $light-blue;
+			}
+
+			dl a {
+				background: $white;
+				color: $text-color;
+
+				&:hover {
+					color: $white;
+				}
+			}
+		}
+	}
+
+	& > dd {
+		margin-left: 0;
+
+		& > a, &.active > a {
+			font-weight: bold;
+		}
+	}
+
+	dl {
+		margin: 0;
+
+		dd {
+			display: none;
+			transition: all 0.3s ease-in;
+
+			a {
+				text-transform: none;
+			}
+		}
+	}
+}
+
+
+/*********************
+GENERAL STYLES
+*********************/
+
+.sub-title {
+	margin-top: 2em;
+}
+
+blockquote {
+    margin: 1.5em 2em;
+}
+
+.boxed {
+	padding: 1.5em;
+
+	&.alignright, &.alignleft {
+		max-width: 230px;
+	}
+
+	&.audio {
+	    margin: 2em 0 2em 65px;
+	    padding: 1em 1em 1em 90px;
+
+	    &.with-image {
+	    	margin-left: 95px;
+	    	padding-left: 120px;
+	    }
+
+	    .attachment {
+	    	top: 50%;
+
+	    	&.icon {
+	    		left: -65px;
+	    		margin-top: -65px;
+	    	}
+
+	    	&.image {
+	    		left: -95px;
+	    		margin-top: -95px;
+	    	}
+	    }
+	}
+
+	&.stat {
+		.twitter {
+			&:hover {
+				color: lighten($blue, 9%);
+			}
+		}
+	}
+}
+
+/*********************
+LINK STYLES
+*********************/
+
+.ext-link:hover:after {
+	background-color: darken($orange, 9%);
+}
+
+
+/*********************
+SECTION HEADERS
+*********************/
+
+.section-header {
+	background-size: auto 130%;
+
+	&.cover {
+		background-size: 100% auto;
+		background-size: cover;
+	}
+}
+
+@each $section, $values in $sections {
+	@if (map-get($values, image)) {
+		.no-js .#{$section} {
+			.section-header {
+				background-image: url('https://d2o0out0f0eahq.cloudfront.net/img/header_bg_#{$section}.jpg');
+			}
+		}
+	}
+}
+
+/*********************
+HEADER
+*********************/
+
+#header {
+	background-image: url('https://d2o0out0f0eahq.cloudfront.net/img/header_bg_intro.jpg');
+  	padding: 8em 0;
+
+  	.row {
+  		width: 75%;
+  		max-width: 860px;
+  	}
+
+  	.sub-title {
+  		font-size: 2.25em;
+  		max-width: 800px;
+  		margin: 0 auto;
+  	}
+}
+	#introbutton {
+	  	position: relative;
+	  	bottom: -50px;
+	  	margin-top: 80px;
+	}
+
+
+/*********************
+INTRO
+*********************/
+
+.intro {
+
+	@media (max-width: 1029px) {
+		.bio {
+			float: none;
+			margin: 0.5em 0 0; 
+		}
+	}
+}
+
+/*********************
+DONORS
+*********************/
+
+.donors {
+	p {
+		margin-top: 5em;
+	}
+}

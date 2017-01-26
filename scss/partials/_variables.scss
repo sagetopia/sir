@@ -1,0 +1,50 @@
+/******************************************************************
+Site Name: SIR Annual Report 2015
+Author: Sagetopia
+
+Stylesheet: Variables
+******************************************************************/
+
+
+/*********************
+COLORS
+*********************/
+
+$white:				#ffffff;
+$light-grey:		#f3f8fa;
+$grey:				#d1dde6;
+$dark-grey:			#333333;
+$black:				#232323;
+	
+$green:				#c4d600;
+$dark-green:		#84bd00;
+
+$light-blue:		#009cde;
+$blue:				#34657f;
+$dark-blue:			#2b596e;
+
+$orange:			#ed8b00;
+$yellow:			#ffd100;
+
+$text-color:        $dark-grey;
+$border-color:      $grey;
+
+$twitter-blue:		#8db9ca;
+
+$care-color:		$blue;
+$future-color:		$dark-green;
+$present-color:		$light-blue;
+$financials-color:	$blue;
+$governance-color:	$dark-green;
+$donors-color:		$light-blue;
+
+
+
+$sections: (
+	care: (color: $care-color, image: true), 
+	present: (color: $present-color, image: true), 
+	future: (color: $future-color, image: true), 
+	financials: (color: $financials-color, image: true), 
+	governance: (color: $governance-color, image: true), 
+	donors: (color: $donors-color, image: true)
+);

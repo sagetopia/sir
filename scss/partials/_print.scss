@@ -1,0 +1,132 @@
+/******************************************************************
+Site Name: SIR Annual Report 2015
+Author: Sagetopia
+
+Stylesheet: Print Stylesheet
+******************************************************************/
+
+  * {
+    background: transparent !important;
+    color: black !important;
+    text-shadow: none !important;
+    filter:none !important;
+    transform: none !important;
+  }
+
+  a, a:visited {
+    color: #444 !important;
+    text-decoration: underline;
+
+    // show links on printed pages
+    &:after {
+      content: " (" attr(href) ")";
+      display: inline !important;
+      text-decoration: none !important;
+      border: none !important;
+    }
+
+    // show title too
+    abbr[title]:after {
+      content: " (" attr(title) ")";
+    }
+  }
+
+  .intro .icon-box object {
+    width: 100%;
+    height: 100%;
+  }
+
+  .intro .icon-box {
+    @each $section, $values in $sections {
+      &.#{$section} {
+        .icon-circle {
+          background-color: map-get($values, color) !important;
+        }
+      }
+    }
+  }
+
+  .membership .stat {
+    width: 21.25%;
+  }
+
+  .alignleft, .alignright {
+    margin-bottom: 2em;
+  }
+
+  .alignleft {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .alignright {
+    margin-left: 2em;
+    float: right;
+  }
+
+  .boxed {
+    &.alignright, &.alignleft {
+      max-width: 230px;
+    }
+  }
+
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+
+  pre, blockquote {
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr, img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+  }
+
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2, h3, h4, blockquote {
+    page-break-after: avoid;
+  }
+
+  .boxed {
+    border: none !important;
+  }
+
+  .chart-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    vertical-align: middle;
+    overflow: hidden;
+
+    svg {
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  nav, 
+  .boxed.audio,
+  .audio-player,
+  .flex-video {
+    display: none;
+  }

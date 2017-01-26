@@ -1,0 +1,6 @@
+.codekit-cache
+bower_components
+backup
+.htaccess
+scss/.sass-cache
+.DS_Store

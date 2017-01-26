@@ -1,0 +1,38 @@
+/******************************************************************
+Site Name: SIR Annual Report 2015
+Author: Sagetopia
+
+Stylesheet: Typography
+******************************************************************/
+
+
+/*********************
+FONT FACE
+*********************/
+
+// font stacks
+$sans-serif:        "Helvetica Neue", Helvetica, Arial, sans-serif;
+$serif:             "Georgia", Cambria, Times New Roman, Times, serif;
+
+$roboto:          'roboto', $sans-serif;
+$roboto-slab:     'Roboto Slab', $serif;
+
+p {
+  -ms-word-wrap: break-word;
+  word-break: break-word; //non-standart css for webkit
+  word-wrap: break-word;
+  // cleaning up the ragged lines and breaks
+  -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+          hyphens: auto;
+  // sets a minimum number of characters before and after the break
+  -webkit-hyphenate-before: 4;
+   -webkit-hyphenate-after: 4;
+           hyphenate-lines: 2;
+  // enabling fancy ligatures when available
+  -webkit-font-feature-settings: "liga", "dlig";
+     -moz-font-feature-settings: "liga=1, dlig=1";
+      -ms-font-feature-settings: "liga", "dlig";
+       -o-font-feature-settings: "liga", "dlig";
+          font-feature-settings: "liga", "dlig";
+}

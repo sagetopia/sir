@@ -1,0 +1,23 @@
+/******************************************************************
+Site Name: SIR Annual Report 2015
+Author: Sagetopia
+
+Stylesheet: Desktop Stylsheet
+******************************************************************/
+
+.section-header {
+	background-size: 100% auto;
+	background-size: cover;
+}
+
+.membership .stat {
+	width: 21.25%;
+
+	&.m-last {
+		margin-right: 5%;
+	}
+
+	&.last {
+		margin-right: 0;
+	}
+}

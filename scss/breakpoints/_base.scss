@@ -1,0 +1,1139 @@
+/******************************************************************
+Site Name: SIR Annual Report 2015
+Author: Sagetopia
+
+Stylesheet: Base Mobile Stylesheet
+******************************************************************/
+
+
+/*********************
+LOADING SCREEN
+*********************/
+
+html {
+	font-size: 16px;
+	transition: background-color 1s;
+
+	&.loading {
+		position: fixed;
+		height: 100%;
+		width: 100%;
+		background-color: $white;
+		background-position: center center;
+		background-size: 300px auto;
+		background-repeat: no-repeat;
+		background-image: url('https://d2o0out0f0eahq.cloudfront.net/img/logos_sir.png');
+		background-image: url('https://d2o0out0f0eahq.cloudfront.net/img/logos_sir.svg'), linear-gradient(transparent, transparent);
+		overflow: hidden;
+		transition: background-color 0;
+
+		body {
+			opacity: 0;
+		  	transition: opacity 0;
+		}
+	}
+
+	&.no-js {
+		background: none;
+  		overflow: scroll;
+  		position: static;
+
+  		body {
+  			opacity: 1;
+  		}
+	}
+}
+
+body {
+	transition: opacity 1s ease-in;
+	font-size: 90%;
+	font-family: $roboto;
+	color: $text-color;
+}
+
+p {
+	font-size: 1.125em;
+	margin-bottom: 1.25em;
+}
+
+.no-js {
+	.audio, .lazy, .flex-video {
+		display: none;
+	}
+}
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+
+#canvas {
+  	overflow: hidden;
+}
+
+.row {
+	z-index: 20;
+	position: relative;
+	clear: both;
+
+	&.mobile-full {
+		width: 100%;
+		margin: 0 auto;
+	}
+}
+
+.section {
+  	padding: 3em 0;
+  	position: relative;
+}
+
+.alignleft, .alignright {
+  	margin-bottom: 1em;
+
+  	@media (max-width: 480px) {
+	  	&.bios {
+	  		float: right;
+	  		margin-left: 1em;
+	  		max-width: 30%;
+	  	}
+	}
+}
+
+.clearout {
+	clear: both;
+}
+
+/*********************
+LINK STYLES
+*********************/
+
+a, a:visited {
+	color: $orange;
+
+	&:hover, &:active, &:focus {
+		color: darken($orange, 9%);
+	}
+}
+
+.ext-link {
+	font-weight: bold;
+	letter-spacing: 0.5px;
+
+	&:after {
+		content: "\f245";
+		font-family: "FontAwesome";
+		display: inline-block;
+		height: 14px;
+		width: 14px;
+		padding: 1px 5px;
+		margin: 0 0.5em 0.5em;
+		border-radius: 50%;
+		background-color: $orange;
+		color: $white;
+		text-align: center;
+		vertical-align: middle;
+		font-size: 0.45em;
+		transform: rotate(65deg);
+		transition: background-color 0.2s ease-in-out;
+	}
+}
+
+/************************
+H1, H2, H3, H4, H5 STYLES
+*************************/
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $roboto-slab;
+  	line-height: 1.3;
+}
+
+h1 {
+	font-size: 3em;
+}
+
+h2 {
+	font-size: 2em;
+}
+
+h3 {
+	font-size: 1.5625em;
+}
+
+h4 {
+	font-size: 1.3125em;
+}
+
+h5 {
+	font-size: 1em;
+}
+
+h6 {
+	font-size: 0.9em;
+}
+
+/*********************
+NAV STYLES
+*********************/
+
+.mobile {
+	position: fixed;
+  	top: 0;
+  	left: 0;
+  	width: 100%;
+  	background-color: $green;
+  	z-index: 999;
+  	list-style: none;
+
+  	.mobile-title {
+  		color: $white;
+	    padding: 11px 10px 10px;
+	    margin: 0;
+	    letter-spacing: 2px;
+  	}
+
+  	.menu {
+  		height: 0;
+  		margin: 0;
+		padding: 0 1em;
+  		position: relative;
+  		top: 100%;
+  		background: $dark-green;
+  		transition: height 0.2s;
+  		overflow: hidden;
+
+  		li {
+  			border-top: 1px solid $green;
+			text-align: center;
+			padding: 0;
+			margin: 0;
+
+			a {
+				text-transform: uppercase;
+  				color: $white;
+  				font-weight: 600;
+  				letter-spacing: 1px;
+  				display: block;
+  				padding: 10px 0;
+			}
+
+			&:first-child {
+				border: none;
+			}
+  		}
+  	}
+}
+
+$button-width: 50px;
+$button-height: $button-width;
+$bar-thickness: 5px;                    
+$button-pad: $button-width / 5;                     
+$button-bar-space: $bar-thickness * 2;                
+$button-transition-duration: 0.2s;  
+$button-color: $dark-green;
+$bar-color: $white;
+
+label[for="menu-toggle"] {
+	display: block;
+  	position: absolute;
+  	top: 0;
+  	right: 0;
+  	margin: 0;
+  	padding: 0;
+  	width: $button-width;
+  	height: $button-height;
+  	font-size: 0;
+  	text-indent: -9999px;
+  	appearance: none;
+  	box-shadow: none;
+  	border-radius: none;
+  	border: none;
+  	cursor: pointer;
+  	background-color: $button-color;
+
+  	span {
+	  	display: block;
+	  	position: absolute;
+	  	top: ($button-height - $bar-thickness) / 2;
+	  	left: $button-pad;
+	  	right: $button-pad;
+	  	height: $bar-thickness;
+	  	background-color: $bar-color;
+	  	transition: background 0s, $button-transition-duration;
+	  	pointer-events: none;
+
+	  	&::before, &::after {
+		  	position: absolute;
+		  	display: block;
+		  	left: 0;
+		  	width: 100%;
+		  	height: $bar-thickness;
+		  	background-color: $bar-color;
+		  	content: '';
+		  	transform: rotate(0);
+		  	transition-duration: $button-transition-duration, $button-transition-duration;
+		  	transition-delay: $button-transition-duration, 0s;
+		  	pointer-events: none;
+		}
+
+		&::before {
+			top: -$button-bar-space;
+			-webkit-transition-property: top, -webkit-transform;
+			transition-property: top, -webkit-transform;
+			transition-property: top, transform;
+		}
+
+		&::after {
+			bottom: -$button-bar-space;
+			-webkit-transition-property: bottom, -webkit-transform;
+			transition-property: bottom, -webkit-transform;
+			transition-property: bottom, transform;
+		}
+	}
+}
+
+#menu-toggle {
+    position: absolute;
+    clip: rect(0,0,0,0);
+    right: 0;
+    top: 0;
+}
+
+#menu-toggle:checked {
+	& ~ label[for="menu-toggle"] span {
+		background: none;
+
+		&::before, &::after {
+			transition-delay: 0s, $button-transition-duration;
+		}
+
+		&::before {
+			top: 0;
+			transform: rotate(45deg);
+		}
+
+		&::after {
+			bottom: 0;
+			transform: rotate(-45deg);
+		}
+	}
+
+	& ~ .menu {
+	    height: 321px;
+	}
+}
+
+#main-nav {
+	display: none;
+}
+
+/*********************
+GENERAL STYLES
+*********************/
+
+.section {
+	padding: 5em 0 0;
+}
+
+.section-title, .main-title {
+	color: $white;
+	text-shadow: 2px 2px 5px transparentize($black, .75);
+}
+
+.section-title, .box-title {
+	font-family: $roboto;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+
+.main-title {
+	font-family: $roboto-slab;
+	font-weight: 300;
+	margin: 0;
+	line-height: 1.2;
+}
+
+.sub-title {
+	font-family: $roboto-slab;
+  	border-top: 5px solid $border-color;
+  	padding: 0.4em 0 0;
+  	margin: 1em 0 0.4em;
+}
+
+.section-header {
+	padding: 3em 0;
+}
+
+blockquote {
+    color: $dark-grey;
+    border: 0;
+    position: relative;
+    padding: 1.5em 2em 1.5em 3em;
+    margin: 1em 0;
+    font-style: italic;
+
+	&:before, &:after {
+		position: absolute;
+		display: block;
+	    color: #84bd00;
+	    font-size: 16em;
+	    font-style: normal;
+	    font-weight: bold;
+	    opacity: 0.15;
+	    height: 0.275em;
+	    width: 0.365em;
+	    line-height: 0.75;
+	}
+
+	&:before {
+		content: "\201C";
+		left: -0.05em;
+    	top: 0;
+	}
+
+	&:after {
+		content: "\201D";
+		right: -0.01em;
+    	bottom: 0;
+	}
+}
+
+.icon-circle {
+	border-radius: 50%;
+	box-shadow: 0 0 10px 1px rgba(0,0,0,0.25);
+	background-color: $blue;
+
+	object {
+		max-height: 100%;
+		max-width: 100%;
+		pointer-events: none;
+	}
+}
+
+.caption {
+	font-size: 0.75em;
+	margin: 0.3em 0;
+
+	&.video {
+		margin-bottom: 2em;
+	}
+}
+
+.callout, .boxed {
+	margin-bottom: 1.5em;
+}
+
+.callout {
+	font-weight: 300;
+
+	&.article {
+		display: block;
+		padding-left: 50px;
+		position: relative;
+
+		&:before {
+			content: "\f0f6";
+			font-family: "FontAwesome";
+			font-size: 2em;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+	}
+
+	&.ext-link:after {
+		height: 18px;
+		width: 18px;
+		padding: 4px 7px;
+	}
+}
+
+.boxed {
+	padding: 1em;
+
+	& > *:last-child {
+		margin: 0;
+	}
+
+	.box-title {
+		font-size: 1.125em;
+		font-weight: bold;
+	}
+
+	&.story, &.stat {
+		background-color: $light-grey;
+		border: 1px solid darken($light-grey, 3%);
+	}
+
+	&.stat, &.audio {
+		border-radius: 0.75em;
+
+		* {
+			margin: 0;
+		}
+	}
+
+
+	&.story {
+		.stat {
+			border: none;
+			padding: 0.5em;
+		}
+
+		@media (max-width: 480px) {
+			margin-left: -15px;
+			margin-right: -15px;
+		}
+	}
+
+
+
+	&.stat {
+		text-align: center;
+		hyphens: manual;
+		word-break: normal;
+
+		.number, p, .twitter {
+			color: $blue;
+		}
+
+		.number {
+			font-weight: 300;
+		}
+
+		p {
+			font-weight: bold;
+			letter-spacing: 0.5px;
+		}
+
+		.twitter {
+			border-bottom: 1px dotted $twitter-blue;
+
+			&:after {
+				content: "\f099";
+				font-family: 'FontAwesome';
+				color: $twitter-blue;
+				margin-left: 0.5em;
+			}
+		}
+	}
+
+	&.audio {
+		background-color: $blue;
+		position: relative;
+	    padding: 40px 1em 1em;
+
+	    @media (max-width: 767px) {
+	    	max-width: 500px;
+	    	margin: 0 auto 1em;
+	    	text-align: center;
+
+		    &.with-icon {
+		    	margin-top: 115px;
+		    }
+
+		    &.with-image {
+		    	margin-top: 175px;
+		    }
+		}
+
+		.attachment {
+			border-radius: 50%;
+			position: absolute;
+    		background-color: $dark-blue;
+    		overflow: hidden;
+
+    		&.icon {
+				height: 130px;
+				width: 130px;
+			}
+
+			&.image {
+				height: 190px;
+				width: 190px;
+			}
+
+    		@media (max-width: 767px) {
+	    		left: 50%;
+
+				&.icon {
+					top: -100px;
+					margin-left: -65px;
+				}
+
+				&.image {
+					top: -160px;
+					margin-left: -95px;
+				}
+			}
+		}
+
+		.box-title, p {
+			color: $white;
+		}
+
+		.box-title {
+			text-transform: uppercase;
+		}
+
+		p {
+			font-size: 1em;
+			font-weight: 300;
+			line-height: 1.4;
+		}
+
+		.audio-player {
+			margin-top: 1em;
+		}
+
+		@media (max-width: 767px) {
+			.jp-gui {
+			    margin: 0 auto;
+			}
+		}
+	}
+}
+
+#goodwin-audio .box-title {
+	text-align: center;
+}
+
+.chart-container {
+	margin: 1em 0;
+	min-height: 400px;
+
+	.highcharts-title {
+		font-family: $roboto-slab;
+		font-weight: bold;
+	}
+
+	text {
+		font-family: $roboto;
+	}
+}
+
+.lazy {
+	opacity: 0;
+}
+
+.membership {
+	margin-bottom: 1em;
+
+	h3 {
+		text-align: center;
+		color: $blue;
+	}
+
+	.stat {
+		float: left;
+		width: 47.5%;
+		margin-right: 5%;
+
+		&.m-last {
+			margin-right: 0;
+		}
+	}
+}
+
+/*********************
+AUDIO/VIDEO PLAYER
+*********************/
+
+.youtube {
+	width: 100%;
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    background-color: #000000;
+    box-shadow: 0 2px 20px -5px transparentize($black, 0.5);
+    transition: all 0.2s ease-out;
+    cursor: pointer;
+    margin-bottom: 0;
+
+    .play {
+    	background-color: transparentize($black, 0.2);
+	    position: absolute;
+	    left: 50%;
+	    top: 50%;
+	    margin: -32px 0 0 -32px;
+	    height: 64px;
+	    width: 64px;
+	    border-radius: 50%;  
+	    transition: background-color 0.2s ease-out;
+
+	    &:before {
+	    	content: '';
+	    	display: block;
+	    	width: 0;
+			height: 0;
+			margin-left: 19px;
+			margin-top: 16px;
+			border-style: solid;
+			border-width: 16px 0 16px 32px;
+			border-color: transparent transparent transparent transparentize($white, 0.2);
+			transition: border-color 0.2s ease-out;
+	    }
+    }
+
+    &:hover .play {
+    	background-color: $black;
+
+    	&:before {
+    		border-color: transparent transparent transparent $white;
+    	}
+    }
+}
+
+.audio-player {
+	text-align: left;
+	margin: 1em auto;
+}
+
+.jp-gui {
+    position: relative;
+    background: $dark-grey;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.jp-controls {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-family: "FontAwesome";
+}
+ 
+.jp-controls li {
+    display: inline;
+}
+ 
+.jp-controls a {
+	background-color: $black;
+    color: $white;
+
+    &:hover {
+	    color: $white;
+	}
+}
+
+.jp-play, 
+.jp-pause,
+.jp-mute,
+.jp-unmute {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    text-align: center;
+    line-height: 30px;
+}
+ 
+.jp-controls .jp-play:hover,
+.jp-controls .jp-pause:hover {
+    background-color: lighten($black, 9%);
+}
+ 
+.jp-mute,
+.jp-unmute {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+}
+
+.jp-progress {
+    background-color: #646464;
+    border-radius: 20px 20px 20px 20px;
+    overflow: hidden;
+    position: absolute;
+    left: 50px;
+    top: 9px;
+    width: calc(100% - 100px);
+
+    .jp-state-no-volume & {
+    	width: calc(100% - 70px);
+	}
+}
+ 
+.jp-play-bar {
+    height: 12px;
+    background-color: $yellow;
+    border-radius: 20px 20px 20px 20px;
+}
+
+
+.jp-volume-bar-holder {
+	display: block;
+	position: absolute;
+	background-color: $black;
+	right: 0;
+	bottom: 0;
+	height: 30px;
+	width: 30px;
+	overflow: hidden;
+
+	.jp-state-no-volume & {
+		display: none;
+	}
+}
+ 
+.jp-volume-bar {
+	display: none;
+    position: absolute;
+    right: 9px;
+    top: 9px;
+    width: 12px;
+    height: 90px;
+    border-radius: 20px 20px 20px 20px;
+    background-color: #646464;
+    overflow: hidden;
+    z-index: 1;
+}
+ 
+.jp-volume-bar-value {
+    background-color: $yellow;
+    position: absolute;
+    bottom: 0;
+    width: 12px;
+    border-radius: 20px 20px 20px 20px;
+    z-index: 2;
+}
+
+
+/*********************
+SECTION HEADERS
+*********************/
+
+.section-header {
+	background-position: center center;
+	background-size: auto 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+@each $section, $values in $sections {
+	.#{$section} {
+		.section-header {
+			background-color: map-get($values, color);
+
+			@if (map-get($values, image)) {
+				.no-js & {
+					background-image: url(https://s3.amazonaws.com/sirweb.org/img/header_bg_#{$section}_m.jpg);
+				}
+			}
+		}
+		.sub-title, .box-title {
+			color: map-get($values, color);
+		}
+		blockquote {
+			&:before, &:after {
+				color: map-get($values, color);
+			}
+		}
+	}
+}
+
+
+/*********************
+SITE HEADER
+*********************/
+
+#header {
+	background-color: $light-blue;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-image: url('https://d2o0out0f0eahq.cloudfront.net/img/header_bg_intro_m.jpg');
+	background-size: auto 100%;
+	background-size: cover;
+  	padding: 6em 0 2em;
+  	text-align: center;
+
+  	.row {
+  		margin: 0 auto;
+  	}
+
+  	.section-title {
+  		text-transform: uppercase;
+  		color: $green;
+  	}
+
+  	.main-title {
+  		font-family: $roboto;
+  		font-weight: 500;
+  	}
+
+  	.sub-title {
+  		color: $white;
+  		border: 0;
+  		margin: 0;
+  		text-shadow: 2px 2px 5px transparentize($black, .75);
+  	}
+}
+
+	#introbutton {
+	  	width: 45px;
+	  	height: 45px;
+	  	margin: 40px auto 0;
+	  	z-index: 15;
+	  	background-color: $light-blue;
+
+	  	a {
+  			color: $white;
+  			line-height: 45px;
+  			font-size: 30px;
+	  	}
+	}
+
+
+/*********************
+INTRO
+*********************/
+
+.intro {
+
+	.section-title, .box-title {
+  		font-size: 1.125em;
+		text-transform: uppercase;
+	}
+
+	.section-title {
+  		color: $green;
+  		text-shadow: none;
+  	}
+
+	.sub-title {
+		color: $light-blue;
+		padding: 0 0 0.4em;
+		border-top: none;
+		border-bottom: 5px solid $grey;
+		margin-top: 0;
+	}
+
+	.bio {
+		@media (max-width: 767px) {
+			max-width: 45%;
+			max-width: calc(50% - 0.5em);
+		}
+		float: left;
+		margin-left: 1em;
+
+		&:first-child {
+			margin: 0;
+		}
+	}
+
+	.icon-box {
+		@media (max-width: 767px) {
+			max-width: 400px;
+			margin: 0 auto;
+			text-align: center;
+		}
+
+		.icon-circle {
+			display: block;
+			height: 155px;
+			width: 155px;
+			padding: 1.5em;
+			@media (max-width: 767px) {
+				margin: 1em auto;
+				float: none;
+			}
+		}
+
+		p {
+			font-size: 1em;
+		}
+
+		@each $section, $values in $sections {
+			&.#{$section} {
+				.icon-circle {
+					background-color: map-get($values, color);
+				}
+				.box-title {
+					color: map-get($values, color);
+				}
+			}
+		}
+	}
+}
+
+
+/*********************
+PRESENT
+*********************/
+
+.present {
+	.columns > .box-title {
+		margin-top: 2em;
+	}
+}
+
+/*********************
+FINANCIALS
+*********************/
+
+.financial-table {
+	margin-bottom: 1.5em;
+
+	.title, .description {
+		font-family: $roboto;
+	}
+
+	.title {
+		font-weight: bold;
+		font-size: 1.125em;
+	}
+
+	.title, p {
+		margin: 0;
+	}
+
+	p {
+		font-size: 1em;
+	}
+
+	span {
+		float: right;
+	}
+
+	header {
+		background-color: $dark-blue;
+		padding: 1em;
+
+		* {
+			color: $white;
+			margin: 0;
+			letter-spacing: 0.5px;
+		}
+
+		.title {
+			text-transform: uppercase;
+		}
+	}
+
+	.table {
+		padding: 0.5em 1.5em 1.5em;
+		background-color: $light-grey;
+		border: 1px solid darken($light-grey, 3%);
+
+		.table-section {
+			margin-bottom: 1em;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			.title {
+				color: $blue;
+			}
+
+			.title, p {
+				padding: 0.4em 0;
+				border-bottom: 1px solid $grey;
+			}
+
+			&.total, &.net {
+				.title {
+					border: 0;
+				}
+			}
+
+			&.total {
+				margin-bottom: 1.5em;
+
+				.title {
+					color: $dark-green;
+				}
+			}
+
+			&.net {
+				background-color: $dark-green;
+				padding: 0 0.5em;
+				margin-left: -0.5em;
+				margin-right: -0.5em;
+
+				.title {
+					color: $white;
+				}
+			}
+		}
+	}
+}
+
+
+/*********************
+GOVERNANCE
+*********************/
+
+.governance {
+	p {
+		font-weight: bold;
+
+		.title {
+			font-weight: normal;
+			font-size: 0.8em;
+			font-style: italic;
+		}
+	}
+}
+
+
+/*********************
+DONORS
+*********************/
+
+.donors {
+	p, h4 {
+		margin-top: 2em;
+	}
+
+	.callout.article:before {
+		top: auto;
+		bottom: -0.35em;
+	}
+}
+
+/*********************
+FOOTER
+*********************/
+
+.footer {
+	margin-top: 5em;
+	padding: 5em 1em;
+	background-color: $blue;
+	color: $white;
+	text-align: center;
+
+	a {
+		color: $green;
+
+		&:hover {
+			color: $dark-green;
+		}
+	}
+
+	.section-title {
+		color: $light-blue;
+	}
+
+	.social {
+		margin-bottom: 1em;
+
+		a {
+			display: inline-block;
+			height: 30px;
+			width: 30px;
+			font-size: 18px;
+			line-height: 30px;
+			color: $blue;
+			background-color: $white;
+			border-radius: 50%;
+			margin: 0 2px;
+
+			&:hover {
+				background-color: $green;
+				color: $white;
+			}
+		}
+	}
+}
