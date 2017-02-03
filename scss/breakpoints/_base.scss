@@ -1,5 +1,5 @@
 /******************************************************************
-Site Name: SIR Annual Report 2015
+Site Name: SIR Annual Report 2016
 Author: Sagetopia
 
 Stylesheet: Base Mobile Stylesheet
@@ -54,6 +54,7 @@ body {
 p {
 	font-size: 1.125em;
 	margin-bottom: 1.25em;
+	font-feature-settings: "liga" 0;
 }
 
 .no-js {
@@ -163,7 +164,7 @@ h4 {
 }
 
 h5 {
-	font-size: 1em;
+	font-size: 1.125em;
 }
 
 h6 {
@@ -209,7 +210,7 @@ NAV STYLES
 			a {
 				text-transform: uppercase;
   				color: $white;
-  				font-weight: 600;
+  				font-weight: bold;
   				letter-spacing: 1px;
   				display: block;
   				padding: 10px 0;
@@ -333,14 +334,29 @@ GENERAL STYLES
 	padding: 5em 0 0;
 }
 
-.section-title, .main-title {
+.section-title, .main-title, .section-intro {
 	color: $white;
 	text-shadow: 2px 2px 5px transparentize($black, .75);
 }
 
 .section-title, .box-title {
 	font-family: $roboto;
-	font-weight: bold;
+	font-weight: normal;
+	letter-spacing: 2px;
+}
+
+.columns > {
+	.box-title {
+		margin: 2em 0 1em;
+	}
+	.box-sub-title {
+		margin: 1em 0 1em;
+	}
+}
+
+.box-sub-title {
+	font-family: $roboto-slab;
+	font-weight: normal;
 	letter-spacing: 2px;
 }
 
@@ -349,6 +365,13 @@ GENERAL STYLES
 	font-weight: 300;
 	margin: 0;
 	line-height: 1.2;
+}
+
+.section-intro {
+	font-family: $roboto-slab;
+	font-weight: 300;
+	margin-top: 0.5rem;
+	line-height: 1.5;
 }
 
 .sub-title {
@@ -360,6 +383,18 @@ GENERAL STYLES
 
 .section-header {
 	padding: 3em 0;
+}
+
+ol {
+	list-style-type: decimal;
+}
+
+ul {
+	list-style-type: disc;
+}
+
+li {
+	margin-top: 1em;
 }
 
 blockquote {
@@ -458,12 +493,12 @@ blockquote {
 		font-weight: bold;
 	}
 
-	&.story, &.stat {
+	&.story, &.stat, &.sidebar {
 		background-color: $light-grey;
 		border: 1px solid darken($light-grey, 3%);
 	}
 
-	&.stat, &.audio {
+	&.stat, &.sidebar, &.audio {
 		border-radius: 0.75em;
 
 		* {
@@ -513,6 +548,16 @@ blockquote {
 				color: $twitter-blue;
 				margin-left: 0.5em;
 			}
+		}
+	}
+
+	&.sidebar {
+		hyphens: manual;
+		word-break: normal;
+
+		p {
+			color: $blue;
+			font-size: 1em;
 		}
 	}
 
@@ -576,7 +621,6 @@ blockquote {
 
 		p {
 			font-size: 1em;
-			font-weight: 300;
 			line-height: 1.4;
 		}
 
@@ -818,11 +862,11 @@ SECTION HEADERS
 
 			@if (map-get($values, image)) {
 				.no-js & {
-					background-image: url(https://s3.amazonaws.com/sirweb.org/img/header_bg_#{$section}_m.jpg);
+					background-image: url(../img/header/header_bg_#{$section}_m.jpg);
 				}
 			}
 		}
-		.sub-title, .box-title {
+		.sub-title, .box-title, .box-sub-title {
 			color: map-get($values, color);
 		}
 		blockquote {
@@ -838,52 +882,106 @@ SECTION HEADERS
 SITE HEADER
 *********************/
 
-#header {
-	background-color: $light-blue;
-	background-repeat: no-repeat;
-	background-position: center top;
-	background-image: url('https://d2o0out0f0eahq.cloudfront.net/img/header_bg_intro_m.jpg');
-	background-size: auto 100%;
-	background-size: cover;
-  	padding: 6em 0 2em;
-  	text-align: center;
-
-  	.row {
-  		margin: 0 auto;
-  	}
-
-  	.section-title {
-  		text-transform: uppercase;
-  		color: $green;
-  	}
-
-  	.main-title {
-  		font-family: $roboto;
-  		font-weight: 500;
-  	}
-
-  	.sub-title {
-  		color: $white;
-  		border: 0;
-  		margin: 0;
-  		text-shadow: 2px 2px 5px transparentize($black, .75);
-  	}
+@keyframes imageAnimation { 
+  0% {
+      opacity: 0;
+      animation-timing-function: ease-in;
+  }
+  8% {
+      opacity: 1;
+      transform: scale(1.05);
+      animation-timing-function: ease-out;
+  }
+  17% {
+      opacity: 1;
+      transform: scale(1.1);
+  }
+  25% {
+      opacity: 0;
+      transform: scale(1.1);
+  }
+  100% { opacity: 0 }
 }
 
-	#introbutton {
-	  	width: 45px;
-	  	height: 45px;
-	  	margin: 40px auto 0;
-	  	z-index: 15;
-	  	background-color: $light-blue;
+#slideshow {
+	list-style-type: none;
+	margin: 0;
 
-	  	a {
-  			color: $white;
-  			line-height: 45px;
-  			font-size: 30px;
-	  	}
+	li .image {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		color: transparent;
+		background-size: cover;
+		background-position: 50% 50%;
+		background-repeat: none;
+		opacity: 0;
+		z-index: 0;
+		animation: imageAnimation 24s linear infinite 0s; 
+	}
+	li:nth-child(1) .image {
+	background-image: url(../img/header/header_bg_intro_1.jpg);
 	}
 
+	li:nth-child(2) .image {
+		background-image: url(../img/header/header_bg_intro_2.jpg);
+		animation-delay: 6s;
+	}
+
+	li:nth-child(3) .image {
+		background-image: url(../img/header/header_bg_intro_3.jpg);
+		animation-delay: 12s;
+	}
+
+	li:nth-child(4) .image {
+		background-image: url(../img/header/header_bg_intro_4.jpg);
+		animation-delay: 18s;
+	}
+}
+
+#header {
+	background-color: $light-blue;
+	padding: 6em 0 2em;
+	text-align: center;
+	overflow: hidden;
+
+	.row {
+		margin: 0 auto;
+	}
+
+	.section-title {
+		text-transform: uppercase;
+		color: $green;
+	}
+
+	.main-title {
+		font-family: $roboto;
+		font-weight: 500;
+	}
+
+	.sub-title {
+		color: $white;
+		border: 0;
+		margin: 0;
+		text-shadow: 2px 2px 5px transparentize($black, .75);
+	}
+}
+
+#introbutton {
+	width: 45px;
+	height: 45px;
+	margin: 40px auto 0;
+	z-index: 15;
+	background-color: $light-blue;
+
+	a {
+		color: $white;
+		line-height: 45px;
+		font-size: 30px;
+	}
+}
 
 /*********************
 INTRO
@@ -892,14 +990,14 @@ INTRO
 .intro {
 
 	.section-title, .box-title {
-  		font-size: 1.125em;
+		font-size: 1.125em;
 		text-transform: uppercase;
 	}
 
 	.section-title {
-  		color: $green;
-  		text-shadow: none;
-  	}
+		color: $light-blue;
+		text-shadow: none;
+	}
 
 	.sub-title {
 		color: $light-blue;
@@ -954,17 +1052,6 @@ INTRO
 				}
 			}
 		}
-	}
-}
-
-
-/*********************
-PRESENT
-*********************/
-
-.present {
-	.columns > .box-title {
-		margin-top: 2em;
 	}
 }
 

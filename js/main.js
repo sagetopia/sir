@@ -338,7 +338,7 @@ $(document).ready(function() {
             <div class="jp-progress">\
                 <div class="jp-seek-bar">\
                     <div class="jp-play-bar"></div>\
-                </div> 
+                </div>\
             </div>\
             <div class="jp-volume-bar-holder">\
                 <div class="jp-volume-bar" style="display:none">\
@@ -483,7 +483,7 @@ $(window).load(function() {
         },
         elements: nodes,
         appear: function doReveal(el) {
-          var bg = 'url(https://d2o0out0f0eahq.cloudfront.net/img/header_bg_' + el.getAttribute('data-lazy') + (updateViewportDimensions().width < 768 ? '_m' : '') + '.jpg)';
+          var bg = 'url(img/header/header_bg_' + el.getAttribute('data-lazy') + (updateViewportDimensions().width < 768 ? '_m' : '') + '.jpg)';
           el.style.backgroundImage = bg;
           el.removeAttribute('data-lazy');
         },

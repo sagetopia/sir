@@ -179,11 +179,27 @@ blockquote {
     margin: 1.5em 2em;
 }
 
+@media (min-width: 925px) {
+	.alignleft.sidebar {
+		margin-right: 2em;
+	}
+
+	.alignright.sidebar {
+		margin-left: 2em;
+	}
+}
+
 .boxed {
 	padding: 1.5em;
 
 	&.alignright, &.alignleft {
 		max-width: 230px;
+
+		@media (min-width: 925px) {
+			&.sidebar {
+				max-width: 45%;
+			}
+		}
 	}
 
 	&.audio {
@@ -245,7 +261,7 @@ SECTION HEADERS
 	@if (map-get($values, image)) {
 		.no-js .#{$section} {
 			.section-header {
-				background-image: url('https://d2o0out0f0eahq.cloudfront.net/img/header_bg_#{$section}.jpg');
+				background-image: url('../img/header_bg_#{$section}.jpg');
 			}
 		}
 	}
@@ -256,7 +272,7 @@ HEADER
 *********************/
 
 #header {
-	background-image: url('https://d2o0out0f0eahq.cloudfront.net/img/header_bg_intro.jpg');
+	// background-image: url('https://d2o0out0f0eahq.cloudfront.net/img/header_bg_intro.jpg');
   	padding: 8em 0;
 
   	.row {

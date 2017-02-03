@@ -12,16 +12,28 @@ Stylesheet: 481px and Up Stylesheet
 .alignleft {
 	margin-right: 2em;
 	float: left;
+
+	&.sidebar {
+		margin-right: 0;
+	}
 }
 
 .alignright {
 	margin-left: 2em;
 	float: right;
 	clear: right;
+
+	&.sidebar {
+		margin-left: 0;
+	}
 }
 
 .boxed {
 	&.alignright, &.alignleft {
 		max-width: 200px;
+
+		&.sidebar {
+				max-width: 100%;
+		}
 	}
 }
