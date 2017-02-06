@@ -39,12 +39,6 @@
 		"oAP": "\/audio\/pyne.mp3",
 		"oF": 0
 		},
-	"\/audio\/test.mp3": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/audio\/test.mp3",
-		"oF": 0
-		},
 	"\/backup\/2016_03_24.zip": {
 		"ft": 8192,
 		"oA": 2,
