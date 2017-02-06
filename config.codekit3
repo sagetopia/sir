@@ -21,6 +21,24 @@
 		"oAP": "\/.htaccess",
 		"oF": 0
 		},
+	"\/audio\/collins.mp3": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/audio\/collins.mp3",
+		"oF": 0
+		},
+	"\/audio\/marx.mp3": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/audio\/marx.mp3",
+		"oF": 0
+		},
+	"\/audio\/pyne.mp3": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/audio\/pyne.mp3",
+		"oF": 0
+		},
 	"\/audio\/test.mp3": {
 		"ft": 8192,
 		"oA": 2,
