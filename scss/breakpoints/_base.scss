@@ -883,24 +883,21 @@ SITE HEADER
 *********************/
 
 @keyframes imageAnimation { 
-  0% {
-      opacity: 0;
-      animation-timing-function: ease-in;
-  }
-  8% {
-      opacity: 1;
-      transform: scale(1.05);
-      animation-timing-function: ease-out;
-  }
-  17% {
-      opacity: 1;
-      transform: scale(1.1);
-  }
-  25% {
-      opacity: 0;
-      transform: scale(1.1);
-  }
-  100% { opacity: 0 }
+	0% {
+		opacity: 0;
+		animation-timing-function: ease-in;
+	}
+	12% {
+		opacity: 1;
+	}
+	24% {
+		opacity: 1;
+	}
+	60% {
+		opacity: 0;
+		transform: scale(1.5);
+		animation-timing-function: ease-out;
+	}
 }
 
 #slideshow {
@@ -919,26 +916,15 @@ SITE HEADER
 		background-repeat: none;
 		opacity: 0;
 		z-index: 0;
-		animation: imageAnimation 24s linear infinite 0s; 
+		animation: imageAnimation 24s infinite; 
 	}
-	li:nth-child(1) .image {
-	background-image: url(../img/header/header_bg_intro_1.jpg);
-	}
-
-	li:nth-child(2) .image {
-		background-image: url(../img/header/header_bg_intro_2.jpg);
-		animation-delay: 6s;
+	@for $image from 1 through 4 {
+		li:nth-child(#{$image}) .image {
+			background-image: url(../img/header/header_bg_intro_#{$image}.jpg);
+			animation-delay: #{($image - 1) * 6}s;
+		}
 	}
 
-	li:nth-child(3) .image {
-		background-image: url(../img/header/header_bg_intro_3.jpg);
-		animation-delay: 12s;
-	}
-
-	li:nth-child(4) .image {
-		background-image: url(../img/header/header_bg_intro_4.jpg);
-		animation-delay: 18s;
-	}
 }
 
 #header {
