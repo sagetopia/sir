@@ -4360,6 +4360,22 @@
 		"oF": 0,
 		"opt": 0
 		},
+	"\/img\/chart\/sample-chart.png": {
+		"ft": 32768,
+		"iS": 20381,
+		"oA": 0,
+		"oAP": "\/img\/chart\/sample-chart.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/chart\/sample-chart@0.5x.png": {
+		"ft": 32768,
+		"iS": 8955,
+		"oA": 0,
+		"oAP": "\/img\/chart\/sample-chart@0.5x.png",
+		"oF": 0,
+		"opt": 0
+		},
 	"\/img\/header\/header_bg_care.jpg": {
 		"ft": 16384,
 		"iS": 170363,
