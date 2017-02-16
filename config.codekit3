@@ -4248,22 +4248,6 @@
 		"oF": 0,
 		"opt": 0
 		},
-	"\/img\/bio\/bio_matsumoto-alan.jpg": {
-		"ft": 16384,
-		"iS": 21573,
-		"oA": 0,
-		"oAP": "\/img\/bio\/matsumoto-alan.jpg",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/img\/bio\/bio_matsumoto-alan@2x.jpg": {
-		"ft": 16384,
-		"iS": 21573,
-		"oA": 0,
-		"oAP": "\/img\/bio\/bio_matsumoto-alan@2x.jpg",
-		"oF": 0,
-		"opt": 0
-		},
 	"\/img\/bio\/bio_patel-parag.jpg": {
 		"ft": 16384,
 		"iS": 39551,
@@ -4309,6 +4293,22 @@
 		"iS": 16368,
 		"oA": 0,
 		"oAP": "\/img\/bio\/bio_raabe-rodney@2x.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/bio\/bio_ray-charles.jpg": {
+		"ft": 16384,
+		"iS": 18175,
+		"oA": 0,
+		"oAP": "\/img\/bio\/bio_ray-charles.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/bio\/bio_ray-charles@2x.jpg": {
+		"ft": 16384,
+		"iS": 61045,
+		"oA": 0,
+		"oAP": "\/img\/bio\/bio_ray-charles@2x.jpg",
 		"oF": 0,
 		"opt": 0
 		},
@@ -4360,15 +4360,9 @@
 		"oF": 0,
 		"opt": 0
 		},
-	"\/img\/donor-list-3.pdf": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/img\/donor-list-3.pdf",
-		"oF": 0
-		},
 	"\/img\/header\/header_bg_care.jpg": {
 		"ft": 16384,
-		"iS": 201007,
+		"iS": 170363,
 		"oA": 0,
 		"oAP": "\/img\/header\/header_bg_care.jpg",
 		"oF": 0,
@@ -4376,15 +4370,31 @@
 		},
 	"\/img\/header\/header_bg_care_m.jpg": {
 		"ft": 16384,
-		"iS": 201007,
+		"iS": 170363,
 		"oA": 0,
 		"oAP": "\/img\/header\/header_bg_care_m.jpg",
 		"oF": 0,
 		"opt": 0
 		},
+	"\/img\/header\/header_bg_financials.jpg": {
+		"ft": 16384,
+		"iS": 117292,
+		"oA": 0,
+		"oAP": "\/img\/header\/header_bg_financials.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/header\/header_bg_financials_m.jpg": {
+		"ft": 16384,
+		"iS": 117292,
+		"oA": 0,
+		"oAP": "\/img\/header\/header_bg_financials_m.jpg",
+		"oF": 0,
+		"opt": 0
+		},
 	"\/img\/header\/header_bg_future.jpg": {
 		"ft": 16384,
-		"iS": 298036,
+		"iS": 231663,
 		"oA": 0,
 		"oAP": "\/img\/header\/header_bg_future.jpg",
 		"oF": 0,
@@ -4392,7 +4402,7 @@
 		},
 	"\/img\/header\/header_bg_future_m.jpg": {
 		"ft": 16384,
-		"iS": 298036,
+		"iS": 231663,
 		"oA": 0,
 		"oAP": "\/img\/header\/header_bg_future_m.jpg",
 		"oF": 0,
@@ -4400,7 +4410,7 @@
 		},
 	"\/img\/header\/header_bg_intro_1.jpg": {
 		"ft": 16384,
-		"iS": 126239,
+		"iS": 110868,
 		"oA": 0,
 		"oAP": "\/img\/header\/header_bg_intro_1.jpg",
 		"oF": 0,
@@ -4408,7 +4418,7 @@
 		},
 	"\/img\/header\/header_bg_intro_2.jpg": {
 		"ft": 16384,
-		"iS": 154292,
+		"iS": 131940,
 		"oA": 0,
 		"oAP": "\/img\/header\/header_bg_intro_2.jpg",
 		"oF": 0,
@@ -4416,7 +4426,7 @@
 		},
 	"\/img\/header\/header_bg_intro_3.jpg": {
 		"ft": 16384,
-		"iS": 187346,
+		"iS": 154546,
 		"oA": 0,
 		"oAP": "\/img\/header\/header_bg_intro_3.jpg",
 		"oF": 0,
@@ -4424,7 +4434,7 @@
 		},
 	"\/img\/header\/header_bg_intro_4.jpg": {
 		"ft": 16384,
-		"iS": 207015,
+		"iS": 166565,
 		"oA": 0,
 		"oAP": "\/img\/header\/header_bg_intro_4.jpg",
 		"oF": 0,
@@ -4432,7 +4442,7 @@
 		},
 	"\/img\/header\/header_bg_present.jpg": {
 		"ft": 16384,
-		"iS": 245599,
+		"iS": 280138,
 		"oA": 0,
 		"oAP": "\/img\/header\/header_bg_present.jpg",
 		"oF": 0,
@@ -4440,7 +4450,7 @@
 		},
 	"\/img\/header\/header_bg_present_m.jpg": {
 		"ft": 16384,
-		"iS": 245599,
+		"iS": 280138,
 		"oA": 0,
 		"oAP": "\/img\/header\/header_bg_present_m.jpg",
 		"oF": 0,
@@ -4448,7 +4458,7 @@
 		},
 	"\/img\/icon\/icon-care.png": {
 		"ft": 32768,
-		"iS": 1994,
+		"iS": 2267,
 		"oA": 0,
 		"oAP": "\/img\/icon\/icon-care.png",
 		"oF": 0,
@@ -4466,7 +4476,7 @@
 		},
 	"\/img\/icon\/icon-future.png": {
 		"ft": 32768,
-		"iS": 2064,
+		"iS": 1707,
 		"oA": 0,
 		"oAP": "\/img\/icon\/icon-future.png",
 		"oF": 0,
@@ -4484,7 +4494,7 @@
 		},
 	"\/img\/icon\/icon-present.png": {
 		"ft": 32768,
-		"iS": 1885,
+		"iS": 2127,
 		"oA": 0,
 		"oAP": "\/img\/icon\/icon-present.png",
 		"oF": 0,
@@ -4623,6 +4633,12 @@
 		"oAP": "\/img\/nothing.gif",
 		"oF": 0,
 		"opt": 0
+		},
+	"\/img\/SIR_DonorList_2016.pdf": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/img\/SIR_DonorList_2016.pdf",
+		"oF": 0
 		},
 	"\/img\/tab_arrow.png": {
 		"ft": 32768,
@@ -4863,6 +4879,15 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"\/js\/vendor\/jquery.magnific-popup.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/vendor\/min\/jquery.magnific-popup-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
 	"\/js\/vendor\/min\/appear.min.js": {
 		"ft": 64,
 		"mi": 1,
@@ -4877,6 +4902,15 @@
 		"mi": 1,
 		"oA": 1,
 		"oAP": "\/js\/vendor\/min\/min\/classlist-min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/js\/vendor\/min\/jquery.magnific-popup.min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/vendor\/min\/min\/jquery.magnific-popup.min-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
@@ -5664,6 +5698,32 @@
 		"ma": 0,
 		"oA": 0,
 		"oAP": "\/css\/style.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"\/scss\/vendor\/_magnific-popup-settings.scss": {
+		"aP": 1,
+		"bl": 1,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/scss\/css\/_magnific-popup-settings.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"\/scss\/vendor\/_magnific-popup.scss": {
+		"aP": 1,
+		"bl": 1,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/scss\/css\/_magnific-popup.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 1

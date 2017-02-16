@@ -179,14 +179,22 @@ blockquote {
     margin: 1.5em 2em;
 }
 
-@media (min-width: 925px) {
-	.alignleft.sidebar {
+.alignleft {
+
+	&.sidebar, &.sidebar-chart {
 		margin-right: 2em;
 	}
+}
 
-	.alignright.sidebar {
+.alignright {
+
+	&.sidebar, &.sidebar-chart {
 		margin-left: 2em;
 	}
+}
+
+.sidebar-chart {
+	max-width: 45%;
 }
 
 .boxed {
@@ -195,10 +203,8 @@ blockquote {
 	&.alignright, &.alignleft {
 		max-width: 230px;
 
-		@media (min-width: 925px) {
-			&.sidebar {
-				max-width: 45%;
-			}
+		&.sidebar {
+			max-width: 45%;
 		}
 	}
 
