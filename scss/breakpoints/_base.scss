@@ -22,8 +22,8 @@ html {
 		background-position: center center;
 		background-size: 300px auto;
 		background-repeat: no-repeat;
-		background-image: url('https://d2o0out0f0eahq.cloudfront.net/img/logos_sir.png');
-		background-image: url('https://d2o0out0f0eahq.cloudfront.net/img/logos_sir.svg'), linear-gradient(transparent, transparent);
+		background-image: url('img/logos_sir.png');
+		background-image: url('img/logos_sir.svg'), linear-gradient(transparent, transparent);
 		overflow: hidden;
 		transition: background-color 0;
 
@@ -1114,6 +1114,15 @@ FINANCIALS
 
 		.title {
 			text-transform: uppercase;
+		}
+	}
+
+	.indent {
+		text-indent: 2em;
+		font-style: italic;
+
+		span {
+			font-style: normal;
 		}
 	}
 
