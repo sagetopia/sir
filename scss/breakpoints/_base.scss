@@ -898,6 +898,9 @@ SECTION HEADERS
 		.sub-title, .box-title, .box-sub-title {
 			color: map-get($values, color);
 		}
+		.sub-title {
+			border-color: rgba( map-get($values, color), .25 );
+		}
 		blockquote {
 			&:before, &:after {
 				color: map-get($values, color);
