@@ -645,24 +645,36 @@ blockquote {
 	}
 }
 
-.alignleft.sidebar-chart {
+.alignleft.sidebar-image {
 	margin-right: 1em;
 	float: left;
 }
 
-.alignright.sidebar-chart {
+.alignright.sidebar-image {
 	margin-left: 2em;
 	float: right;
 	clear: right;
 }
 
-.sidebar-chart {
+.sidebar-image {
 	max-width: 45%;
 
 	img {
 		margin-bottom: 0.5em;
 		box-shadow: 0 0 10px 0 rgba(0,0,0,0.25);
-	} 
+	}
+
+	&.grid {
+		float: left;
+		clear: left;
+		margin-top: 5%;
+		margin-right: 10%;
+
+		&.last {
+			margin-right: 0;
+			clear: none;
+		}
+	}
 }
 
 #goodwin-audio .box-title {

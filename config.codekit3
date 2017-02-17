@@ -4360,19 +4360,131 @@
 		"oF": 0,
 		"opt": 0
 		},
-	"\/img\/chart\/sample-chart.png": {
-		"ft": 32768,
-		"iS": 20381,
+	"\/img\/chart\/sir-abstracts.jpg": {
+		"ft": 16384,
+		"iS": 120280,
 		"oA": 0,
-		"oAP": "\/img\/chart\/sample-chart.png",
+		"oAP": "\/img\/chart\/sir-abstracts.jpg",
 		"oF": 0,
 		"opt": 0
 		},
-	"\/img\/chart\/sample-chart@0.5x.png": {
-		"ft": 32768,
-		"iS": 8955,
+	"\/img\/chart\/sir-abstracts@0.5x.jpg": {
+		"ft": 16384,
+		"iS": 60669,
 		"oA": 0,
-		"oAP": "\/img\/chart\/sample-chart@0.5x.png",
+		"oAP": "\/img\/chart\/sir-abstracts@0.5x.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/chart\/sir-attendance.jpg": {
+		"ft": 16384,
+		"iS": 126108,
+		"oA": 0,
+		"oAP": "\/img\/chart\/sir-attendance.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/chart\/sir-attendance@0.5x.jpg": {
+		"ft": 16384,
+		"iS": 67515,
+		"oA": 0,
+		"oAP": "\/img\/chart\/sir-attendance@0.5x.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/chart\/sir-award.jpg": {
+		"ft": 16384,
+		"iS": 186248,
+		"oA": 0,
+		"oAP": "\/img\/chart\/sir-award.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/chart\/sir-award@0.5x.jpg": {
+		"ft": 16384,
+		"iS": 93669,
+		"oA": 0,
+		"oAP": "\/img\/chart\/sir-award@0.5x.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/chart\/sir-funded.jpg": {
+		"ft": 16384,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/img\/chart\/sir-funded.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/chart\/sir-funded@0.5x.jpg": {
+		"ft": 16384,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/img\/chart\/sir-funded@0.5x.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/chart\/sir-jvir.jpg": {
+		"ft": 16384,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/img\/chart\/sir-jvir.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/chart\/sir-jvir@0.5x.jpg": {
+		"ft": 16384,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/img\/chart\/sir-jvir@0.5x.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/chart\/sir-membership.jpg": {
+		"ft": 16384,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/img\/chart\/sir-membership.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/chart\/sir-membership@0.5x.jpg": {
+		"ft": 16384,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/img\/chart\/sir-membership@0.5x.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/chart\/sir-ratio.jpg": {
+		"ft": 16384,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/img\/chart\/sir-ratio.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/chart\/sir-ratio@0.5x.jpg": {
+		"ft": 16384,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/img\/chart\/sir-ratio@0.5x.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/chart\/sir-temp.png": {
+		"ft": 32768,
+		"iS": 26111,
+		"oA": 0,
+		"oAP": "\/img\/chart\/sir-temp.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/chart\/sir-temp@0.5x.png": {
+		"ft": 32768,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/img\/chart\/sir-temp@0.5x.png",
 		"oF": 0,
 		"opt": 0
 		},
