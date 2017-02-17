@@ -48,9 +48,9 @@ var chart_data = {
 	sir: {
 		type: 'line',
 		title: {
-      text: 'SIR Revenue and Expense Trends 2011-2015',
+      text: 'SIR revenue and expense trends 2012-2016',
     },
-		xAxis: ['2011', '2012', '2013', '2014', '2015'],	
+		xAxis: ['2012', '2013', '2014', '2015', '2016'],	
 		yAxis: {
     	title: {
       	text: 'Dollars ($)',
@@ -75,19 +75,19 @@ var chart_data = {
     },
     series: [{
       	name: 'Revenue',
-      	data: [7983303, 8153353, 7994065, 8556633, 8968141],
+      	data: [8153353, 7994065, 8556633, 8968141, 9707541],
       }, {
       	name: 'Expenses',
-      	data: [8157875, 8148630, 8045748, 8430487, 8508465],
+      	data: [8148630, 8045748, 8430487, 8508465, 9042318],
       }
     ],
   },
   sir_assets: {
     type: 'column',
     title: {
-      text: 'SIR assets 2011-2015',
+      text: 'SIR assets 2012-2016',
     },
-    xAxis: ['2011', '2012', '2013', '2014', '2015'],
+    xAxis: ['2012', '2013', '2014', '2015', '2016'],
     yAxis: {
       min: 0,
       title: {
@@ -102,20 +102,20 @@ var chart_data = {
     },
     series: [{
         name: 'Capital',
-        data: [264639, 191651, 486614, 600297, 1174866]
+        data: [191651, 486614, 600297, 1174866, 1057434]
       }, {
         name: 'Reserves',
-        data: [5947267, 6090070, 6347414, 6610746, 6123355]
+        data: [6090070, 6347414, 6610746, 6123355, 6453447]
       }, {
         name: 'Current',
-        data: [1112323, 1397730, 1458920, 1648313, 2482610]
+        data: [1397730, 1458920, 1648313, 2482610, 2833947]
       }
     ],
   },
   sir_pie: {
     type: 'pie',
     title: {
-      text: 'SIR Revenue Allocation',
+      text: 'SIR revenue allocation',
     },
     tooltip: {
       pointFormat: '{series.name}: <b>${point.y}</b>'
@@ -125,28 +125,28 @@ var chart_data = {
       colorByPoint: true,
       data: [{
             name: 'Membership Dues',
-            y: 2980762,
+            y: 3136091,
             sliced: true,
             selected: true
         }, {
             name: 'Annual Meeting',
-            y: 3329487
+            y: 3690954
         }, {
             name: 'Education',
-            y: 683024 
+            y: 940432 
         }, {
             name: 'JVIR',
-            y: 1062020
+            y: 1028188
         }, {
             name: 'General Programming (CAP Unrestricted)',
-            y: 608666
+            y: 629667
         }, {
             name: 'Other Pubs and Products',
-            y: 246306
-        }, {
-            name: 'Other Programs',
-            y: 57876,
-            color: '#34657f',
+            y: 282209
+        // }, {
+        //     name: 'Other Programs',
+        //     y: 57876,
+        //     color: '#34657f',
         }
       ]
     }],
@@ -154,9 +154,9 @@ var chart_data = {
 	sir_fdn: {
 		type: 'column',
 		title: {
-      text: 'SIR Foundation assets 2012-2015',
+      text: 'SIR Foundation assets 2012-2016',
     },
-		xAxis: ['2011', '2012', '2013', '2014', '2015'],
+		xAxis: ['2012', '2013', '2014', '2015', '2016'],
 		yAxis: {
     	min: 0,
     	title: {
@@ -171,17 +171,17 @@ var chart_data = {
     },
     series: [{
       	name: 'Reserves',
-      	data: [3483576, 3864939, 4374047, 4562279, 4510833]
+      	data: [3864939, 4374047, 4562279, 4510833, 4898942]
       }, {
       	name: 'Current',
-      	data: [2036307, 1872365, 1392610, 1284119, 627749]
+      	data: [1872365, 1392610, 1284119, 627749, 656588]
       }
     ],
   },
   sir_fdn_pie: {
 		type: 'pie',
 		title: {
-      	text: 'SIR Foundation Expense Allocation',
+      	text: 'SIR Foundation 2016 expense allocation',
     },
     tooltip: {
       	pointFormat: '{series.name}: <b>${point.y}</b>'
@@ -190,25 +190,25 @@ var chart_data = {
     	name: 'Expenses',
     	colorByPoint: true,
     	data: [{
-        	name: 'Grants/Awards',
-        	y: 493721 
+          name: 'Governance Admin',
+          y: 57680
         }, {
         	name: 'Fundraising',
-        	y: 184584,
+        	y: 202889,
         	sliced: true,
         	selected: true
         }, {
-        	name: 'Governance Admin',
-        	y: 198320
+          name: 'Clinical Research and Registries',
+          y: 208054
         }, {
-        	name: 'Clinical Trials Research',
-        	y: 202047
+          name: 'GALA',
+          y: 276991
         }, {
-        	name: 'Quality and Outcomes',
-        	y: 220778
+          name: 'Grants/Awards',
+          y: 304607
         }, {
-        	name: 'GALA',
-        	y: 299589
+          name: 'Quality and Outcomes',
+          y: 20931
     	  }
       ],
     }]
@@ -378,7 +378,7 @@ $(document).ready(function() {
 	});
 
   $('.youtube').each(function() {
-    $(this).css('background-image', 'url(http://i.ytimg.com/vi/' + this.id + '/sddefault.jpg)');
+    $(this).css('background-image', 'url(http://i3.ytimg.com/vi/' + this.id + '/hqdefault.jpg)');
 
     $(this).append($('<div/>', {'class': 'play'}));
 
