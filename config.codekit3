@@ -4376,6 +4376,22 @@
 		"oF": 0,
 		"opt": 0
 		},
+	"\/img\/chart\/sir-applications.jpg": {
+		"ft": 16384,
+		"iS": 175546,
+		"oA": 0,
+		"oAP": "\/img\/chart\/sir-applications.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/chart\/sir-applications@0.5x.jpg": {
+		"ft": 16384,
+		"iS": 96869,
+		"oA": 0,
+		"oAP": "\/img\/chart\/sir-applications@0.5x.jpg",
+		"oF": 0,
+		"opt": 0
+		},
 	"\/img\/chart\/sir-attendance.jpg": {
 		"ft": 16384,
 		"iS": 126108,
@@ -4469,22 +4485,6 @@
 		"iS": 0,
 		"oA": 0,
 		"oAP": "\/img\/chart\/sir-ratio@0.5x.jpg",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/img\/chart\/sir-temp.png": {
-		"ft": 32768,
-		"iS": 26111,
-		"oA": 0,
-		"oAP": "\/img\/chart\/sir-temp.png",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/img\/chart\/sir-temp@0.5x.png": {
-		"ft": 32768,
-		"iS": 0,
-		"oA": 0,
-		"oAP": "\/img\/chart\/sir-temp@0.5x.png",
 		"oF": 0,
 		"opt": 0
 		},
