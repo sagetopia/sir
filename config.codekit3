@@ -7,7 +7,7 @@
 		"uuidString": "26452955-B376-47E6-BDD6-A55812B6C911"
 		}
 	],
-"creatorBuild": "25504",
+"creatorBuild": "25568",
 "files": {
 	"\/.gitignore": {
 		"ft": 8192,
@@ -4442,7 +4442,7 @@
 		},
 	"\/img\/chart\/sir-jvir.jpg": {
 		"ft": 16384,
-		"iS": 0,
+		"iS": 95022,
 		"oA": 0,
 		"oAP": "\/img\/chart\/sir-jvir.jpg",
 		"oF": 0,
@@ -4450,7 +4450,7 @@
 		},
 	"\/img\/chart\/sir-jvir@0.5x.jpg": {
 		"ft": 16384,
-		"iS": 0,
+		"iS": 55820,
 		"oA": 0,
 		"oAP": "\/img\/chart\/sir-jvir@0.5x.jpg",
 		"oF": 0,
@@ -5877,7 +5877,7 @@
 	},
 "projectAttributes": {
 	"creationDate": 507505530,
-	"displayValue": "SIR 2015",
+	"displayValue": "SIR 2016",
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-owl"
 	},
@@ -6751,6 +6751,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"no-multi-assign": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-multi-spaces": {
 			"active": 0,
 			"optionString": "{'exceptions': {'Property': true, 'BinaryExpression': false, 'VariableDeclarator': false, 'ImportDeclaration': false}}"
@@ -7079,6 +7083,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"prefer-promise-reject-errors": {
+			"active": 0,
+			"optionString": "{'allowEmptyReject': false}"
+			},
 		"prefer-rest-params": {
 			"active": 0,
 			"optionString": ""
@@ -7172,6 +7180,10 @@
 			"optionString": ""
 			},
 		"template-curly-spacing": {
+			"active": 0,
+			"optionString": "'never'"
+			},
+		"template-tag-spacing": {
 			"active": 0,
 			"optionString": "'never'"
 			},
